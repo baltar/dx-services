@@ -95,10 +95,10 @@ class App {
     await this._notifyStart(version)
 
     // Run all the bots
-    await Promise.all(
-      this._bots.map(bot => bot.start())
-    )
-    logger.info({ msg: 'All bots are ready' })
+    // await Promise.all(
+    //   this._bots.map(bot => bot.start())
+    // )
+    // logger.info({ msg: 'All bots are ready' })
 
     // Run Bots Api server
     await this._botsApiServer.start()
